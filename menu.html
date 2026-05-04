@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CoffeePaglu - Menu</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <img src="imgs/logo.png" alt="Coffeepaglu Logo" class="logo">
+    <nav>
+
+<!-- Hamburger Menu Button -->
+    <button class="hamburger" id="hamburgerBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+
+      <ul class="nav-menu">
+  <li><a href="index.html" class="nav-link">HOME</a></li>
+        <li><a href="gallery.html" class="nav-link">GALLERY</a></li>
+        <li><a href="menu.html" class="nav-link">MENU</a></li>
+        <li><a href="about.html" class="nav-link">ABOUT</a></li>
+        <li><a href="testimonals.html" class="nav-link">TESTIMONALS</a></li>
+        <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+        <li><a href="add-ons.html" class="nav-link">ADD-ONS</a></li>
+        <li><a href="quiz.html" class="nav-link">QUIZ</a></li> 
+        <li><a href="loyality.html" class="nav-link">LOYALITY-CARD</a></li> 
+        <li><a href="brewing.html" class="nav-link">BREWING</a></li> 
+        <li><a href="coffee_humor_page.html" class="nav-link">HUMOR</a></li> 
+      </ul> 
+  </div>
+    </nav>
+    </div>
+    </header>
+<!-- ================= CART SIDEBAR ================= -->
+
+<!-- Cart Icon Button -->
+<div id="cartIcon" class="cart-icon">
+  🛒
+  <span class="cart-count" id="cartCount">0</span>
+</div>
+
+
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <button class="close-cart" id="closeCart">&times;</button>
+  </div>
+  
+  <div class="cart-items" id="cartItems">
+    <div class="empty-cart">Your cart is empty</div>
+  </div>
+
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total:</span>
+      <span id="cartTotal">Rs.0</span>
+    </div>
+    <button class="checkout-btn" id="checkoutBtn" disabled>Proceed to Checkout</button>
+  </div>
+</div>
+
+<!-- ================= MENU SECTION ================= -->
+<section class="menu-section">
+  
+  <div class="menu-container">
+
+
+    <div class="menu-card">
+      <div class="img-wrap">
+        <img src="imgs/esspresso.jpg" alt="Esspresso">
+      </div>
+      <h3>Esspresso</h3>
+      <p>1 Shot,100% energy.</p>
+      <span class="price">Rs.700</span>
+      <button class="add-cart" onclick="addToCart('Esspresso', 700)">Add to Cart</button>
+      <button class="buy-now" onclick="buyNow('Esspresso', 700)">Buy Now</button>
+    </div>
+
+    <div class="menu-card">
+      <div class="img-wrap">
+        <img src="imgs/iced coffee.png" alt="Iced Coffee">
+      </div>
+      <h3>Iced Coffee</h3>
+      <p>chill vibes, cold brew</p>
+      <span class="price">Rs.1100</span>
+      <button class="add-cart" onclick="addToCart('Iced Coffee', 1100)">Add to Cart</button>
+      <button class="buy-now" onclick="buyNow('Iced Coffee', 1100)">Buy Now</button>
+    </div>
+
+    <div class="menu-card">
+      <div class="img-wrap">
+        <img src="imgs/Mocha.png" alt="Mocha">
+      </div>
+      <h3>Mocha</h3>
+      <p>choco+coffee=goals</p>
+      <span class="price">Rs.900</span>
+      <button class="add-cart" onclick="addToCart('Mocha', 900)">Add to Cart</button>
+      <button class="buy-now" onclick="buyNow('Mocha', 900)">Buy Now</button>
+    </div>
+
+    <div class="menu-card">
+      <div class="img-wrap">
+        <img src="imgs/iced americano.png" alt="Iced Americano">
+      </div>
+      <h3>Iced Americano</h3>
+      <p>no fuss,just coffee</p>
+      <span class="price">Rs.900</span>
+      <button class="add-cart" onclick="addToCart('Iced Americano', 900)">Add to Cart</button>
+      <button class="buy-now" onclick="buyNow('Iced Americano', 900)">Buy Now</button>
+    </div>
+
+    <div class="menu-card">
+      <div class="img-wrap">
+        <img src="imgs/coffee1.jpg" alt="Classic Coffee">
+      </div>
+      <h3>Classic Coffee</h3>
+      <p>the OG, no need to explain</p>
+      <span class="price">Rs.750</span>
+      <button class="add-cart" onclick="addToCart('Classic Coffee', 750)">Add to Cart</button>
+      <button class="buy-now" onclick="buyNow('Classic Coffee', 750)">Buy Now</button>
+    </div>
+
+    <div class="menu-card">
+      <div class="img-wrap">
+        <img src="imgs/white cappucino.png" alt="White Cappucino">
+      </div>
+      <h3>White Cappucino</h3>
+      <p>creamy,dreamy,no stress</p>
+      <span class="price">Rs.900</span>
+      <button class="add-cart" onclick="addToCart('White Cappucino', 900)">Add to Cart</button>
+      <button class="buy-now" onclick="buyNow('White Cappucino', 900)">Buy Now</button>
+    </div>
+
+    <div class="menu-card">
+      <div class="img-wrap">
+        <img src="imgs/coffee2.jpg" alt="Cappucino">
+      </div>
+      <h3>Cappucino</h3>
+      <p>the PERFECT BLEND</p>
+      <span class="price">Rs.900</span>
+      <button class="add-cart" onclick="addToCart('Cappucino', 900)">Add to Cart</button>
+      <button class="buy-now" onclick="buyNow('Cappucino', 900)">Buy Now</button>
+    </div>
+
+    <div class="menu-card">
+      <div class="img-wrap">
+        <img src="imgs/flappay.jpg" alt="Frappe">
+      </div>
+      <h3>Frappe</h3>
+      <p>frozen,blended,perfection</p>
+      <span class="price">Rs.1100</span>
+      <button class="add-cart" onclick="addToCart('Frappe', 1100)">Add to Cart</button>
+      <button class="buy-now" onclick="buyNow('Frappe', 1100)">Buy Now</button>
+    </div>
+
+    <div class="menu-card">
+      <div class="img-wrap">
+        <img src="imgs/hot chocolate.jpg" alt="Hot Chocolate">
+      </div>
+      <h3>Hot Chocolate</h3>
+      <p>cozy,rich,winter vibes</p>
+      <span class="price">Rs.1000</span>
+      <button class="add-cart" onclick="addToCart('Hot Chocolate', 1000)">Add to Cart</button>
+      <button class="buy-now" onclick="buyNow('Hot Chocolate', 1000)">Buy Now</button>
+    </div>
+
+    <div class="menu-card">
+      <div class="img-wrap">
+        <img src="imgs/matcha1.jpg" alt="Matcha">
+      </div>
+      <h3>Matcha</h3>
+      <p>green,clean,energy</p>
+      <span class="price">Rs.1000</span>
+      <button class="add-cart" onclick="addToCart('Matcha', 1000)">Add to Cart</button>
+      <button class="buy-now" onclick="buyNow('Matcha', 1000)">Buy Now</button>
+    </div>
+
+    <div class="menu-card">
+      <div class="img-wrap">
+        <img src="imgs/matchalatte (1).png" alt="Matchalatte">
+      </div>
+      <h3>Matchalatte</h3>
+      <p>green tea,creamy dream</p>
+      <span class="price">Rs.1200</span>
+      <button class="add-cart" onclick="addToCart('Matchalatte', 1200)">Add to Cart</button>
+      <button class="buy-now" onclick="buyNow('Matchalatte', 1200)">Buy Now</button>
+    </div>
+
+    <div class="menu-card">
+      <div class="img-wrap">
+        <img src="imgs/greentea.jpg" alt="Green Tea">
+      </div>
+      <h3>Green Tea</h3>
+      <p>healthy,happy,hydrate</p>
+      <span class="price">Rs.550</span>
+      <button class="add-cart" onclick="addToCart('Green Tea', 550)">Add to Cart</button>
+      <button class="buy-now" onclick="buyNow('Green Tea', 550)">Buy Now</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CHECKOUT MODAL ================= -->
+<div class="modal" id="checkoutModal">
+  <div class="modal-content">
+    <button class="close-modal" onclick="closeCheckoutModal()">&times;</button>
+    <div class="modal-header">Complete Your Order</div>
+    
+    <form id="checkoutForm">
+      <div class="form-group">
+        <label for="customerName">Full Name *</label>
+        <input type="text" id="customerName" required placeholder="Enter your name">
+      </div>
+
+      <div class="form-group">
+        <label for="customerPhone">Phone Number *</label>
+        <input type="tel" id="customerPhone" required placeholder="Enter your phone number">
+      </div>
+
+      <div class="form-group">
+        <label for="customerEmail">Email</label>
+        <input type="email" id="customerEmail" placeholder="Enter your email (optional)">
+      </div>
+
+      <div class="form-group">
+        <label for="customerAddress">Delivery Address *</label>
+        <textarea id="customerAddress" required placeholder="Enter your delivery address"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Order Summary</label>
+        <div id="orderSummary" style="background: #f5f1ed; padding: 12px; border-radius: 6px; margin-top: 8px;">
+        </div>
+      </div>
+
+      <div class="modal-buttons">
+        <button type="button" class="modal-btn modal-btn-cancel" onclick="closeCheckoutModal()">Cancel</button>
+        <button type="submit" class="modal-btn modal-btn-submit">Place Order</button>
+      </div>
+    <</form>
+  </div>
+</div>
+
+<script>
+// ================= CART MANAGEMENT ================= 
+// Initialize cart from localStorage
+let cart = JSON.parse(localStorage.getItem('coffeePagluCart')) || [];
+
+// Load cart on page load
+document.addEventListener('DOMContentLoaded', function() {
+  updateCartUI();
+  
+  // Cart icon click - toggle sidebar
+  document.getElementById('cartIcon').addEventListener('click', function() {
+    document.getElementById('cartSidebar').classList.toggle('active');
+  });
+
+  // Close cart button
+  document.getElementById('closeCart').addEventListener('click', function() {
+    document.getElementById('cartSidebar').classList.remove('active');
+  });
+
+  // Checkout button
+  document.getElementById('checkoutBtn').addEventListener('click', openCheckoutModal);
+
+  // Checkout form submission
+  document.getElementById('checkoutForm').addEventListener('submit', submitOrder);
+});
+
+// Add item to cart
+function addToCart(itemName, price) {
+  const existingItem = cart.find(item => item.name === itemName);
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cart.push({ name: itemName, price: price, quantity: 1 });
+  }
+  saveCart();
+  updateCartUI();
+  showNotification(`${itemName} added to cart!`);
+}
+
+// Buy now (replace cart with one item and open checkout)
+function buyNow(itemName, price) {
+  cart = [{ name: itemName, price: price, quantity: 1 }];
+  saveCart();
+  updateCartUI();
+  openCheckoutModal();
+}
+
+// Save cart to localStorage
+function saveCart() {
+  localStorage.setItem('coffeePagluCart', JSON.stringify(cart));
+}
+
+// Update cart UI
+function updateCartUI() {
+  const cartItemsContainer = document.getElementById('cartItems');
+  const cartCount = document.getElementById('cartCount');
+  const cartTotal = document.getElementById('cartTotal');
+  const checkoutBtn = document.getElementById('checkoutBtn');
+
+  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+  cartCount.textContent = totalItems;
+
+  checkoutBtn.disabled = cart.length === 0;
+
+  if (cart.length === 0) {
+    cartItemsContainer.innerHTML = '<div class="empty-cart">Your cart is empty</div>';
+    cartTotal.textContent = 'Rs.0';
+    return;
+  }
+
+  cartItemsContainer.innerHTML = cart.map((item, index) => `
+    <div class="cart-item">
+      <div class="cart-item-header">
+        <span class="cart-item-name">${item.name}</span>
+        <button class="cart-item-remove" onclick="removeFromCart(${index})" aria-label="Remove ${item.name}">&times;</button>
+      </div>
+      <div class="cart-item-price">Rs.${item.price.toFixed(2)}</div>
+      <div class="cart-item-quantity">
+        <button class="qty-btn" onclick="decreaseQuantity(${index})" aria-label="Decrease quantity of ${item.name}">−</button>
+        <span class="qty-display">${item.quantity}</span>
+        <button class="qty-btn" onclick="increaseQuantity(${index})" aria-label="Increase quantity of ${item.name}">+</button>
+      </div>
+    </div>
+  `).join('');
+
+  const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  cartTotal.textContent = `Rs.${total.toFixed(2)}`;
+}
+
+// Remove item from cart
+function removeFromCart(index) {
+  if (index >= 0 && index < cart.length) {
+    cart.splice(index, 1);
+    saveCart();
+    updateCartUI();
+  }
+}
+
+// Increase quantity
+function increaseQuantity(index) {
+  if (cart[index]) {
+    cart[index].quantity += 1;
+    saveCart();
+    updateCartUI();
+  }
+}
+
+// Decrease quantity
+function decreaseQuantity(index) {
+  if (cart[index]) {
+    if (cart[index].quantity > 1) {
+      cart[index].quantity -= 1;
+    } else {
+      cart.splice(index, 1);
+    }
+    saveCart();
+    updateCartUI();
+  }
+}
+
+// Open checkout modal
+function openCheckoutModal() {
+  if (cart.length === 0) {
+    alert('Your cart is empty!');
+    return;
+  }
+
+  const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  const summary = cart.map(item => `${item.name} x${item.quantity} = Rs.${(item.price * item.quantity).toFixed(2)}`).join('<br>');
+
+  document.getElementById('orderSummary').innerHTML = `
+    ${summary}<br><br>
+    <strong>Total: Rs.${total.toFixed(2)}</strong>
+  `;
+
+  document.getElementById('checkoutModal').classList.add('active');
+}
+
+// Close checkout modal
+function closeCheckoutModal() {
+  document.getElementById('checkoutModal').classList.remove('active');
+  document.getElementById('checkoutForm').reset();
+}
+
+// Submit order form
+function submitOrder(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('customerName').value.trim();
+  const phone = document.getElementById('customerPhone').value.trim();
+  const email = document.getElementById('customerEmail').value.trim();
+  const address = document.getElementById('customerAddress').value.trim();
+
+  if (!name || !phone || !email || !address) {
+    alert('Please fill all the fields.');
+    return;
+  }
+
+  const orderDetails = {
+    name,
+    phone,
+    email,
+    address,
+    items: cart,
+    total: cart.reduce((sum, item) => sum + (item.price * item.quantity), 0),
+    orderDate: new Date().toLocaleString()
+  };
+
+  let orders = JSON.parse(localStorage.getItem('coffeePagluOrders')) || [];
+  orders.push(orderDetails);
+  localStorage.setItem('coffeePagluOrders', JSON.stringify(orders));
+
+  showOrderSuccess(orderDetails);
+
+  cart = [];
+  saveCart();
+  updateCartUI();
+
+  closeCheckoutModal();
+  document.getElementById('cartSidebar').classList.remove('active');
+}
+
+// Show order success message
+function showOrderSuccess(order) {
+  const modal = document.getElementById('checkoutModal');
+  const content = modal.querySelector('.modal-content');
+
+  const successHTML = `
+    <div class="success-message">
+      <div class="success-icon">✓</div>
+      <h2>Order Placed Successfully!</h2>
+      <p><strong>Order ID:</strong> #${Math.random().toString(36).substr(2, 9).toUpperCase()}</p>
+      <p><strong>Name:</strong> ${order.name}</p>
+      <p><strong>Phone:</strong> ${order.phone}</p>
+      <p><strong>Total Amount:</strong> Rs.${order.total.toFixed(2)}</p>
+      <p style="margin-top: 20px; font-size: 14px; color: #666;">
+        Your order has been saved. We will contact you shortly to confirm delivery details.
+      </p>
+      <button class="modal-btn modal-btn-submit" style="margin-top: 20px;" onclick="closeCheckoutModal()">
+        Continue Shopping
+      </button>
+    </div>
+  `;
+
+  const originalContent = content.innerHTML;
+  content.innerHTML = successHTML;
+
+  // Restore original content after 5 seconds
+  setTimeout(() => {
+    content.innerHTML = originalContent;
+  }, 5000);
+}
+
+// Show temporary notification
+function showNotification(message) {
+  const notification = document.createElement('div');
+  notification.style.cssText = `
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background: #27ae60;
+    color: white;
+    padding: 16px 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 103;
+    animation: slideInRight 0.3s ease;
+    font-weight: bold;
+  `;
+  notification.textContent = message;
+  document.body.appendChild(notification);
+
+  setTimeout(() => {
+    notification.style.animation = 'slideOutRight 0.3s ease';
+    setTimeout(() => notification.remove(), 300);
+  }, 3000);
+}
+
+// Add notification keyframe animations
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes slideInRight {
+    from { transform: translateX(400px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  @keyframes slideOutRight {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(400px); opacity: 0; }
+  }
+`;
+document.head.appendChild(style);
+</script>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer-container">
+    <p>&copy; 2026 COFFEEPAGLU. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/herjournls._?igsh=M2wwaDgxN3NqbGc0"><img src="imgs/insta.jpg" alt="Instagram"></a>
+      <a href="#"><img src="imgs/fb.jpg" alt="Facebook"></a>
+      <a href="#"><img src="imgs/tiktook.jpg" alt="TicTok"></a>
+    </div>
+  </div>
+</footer>
+</header>
+</body>
+</html>

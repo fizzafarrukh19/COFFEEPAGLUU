@@ -1,0 +1,133 @@
+<!-- ================= COFFEE PERSONALITY TEST ================= -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CoffeePaglu-Quiz</title>
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <img src="imgs/logo.png" alt="Coffeepaglu Logo" class="logo">
+ 
+    <nav>
+  <ul class="nav-menu">
+  <li><a href="index.html" class="nav-link">HOME</a></li>
+        <li><a href="gallery.html" class="nav-link">GALLERY</a></li>
+        <li><a href="menu.html" class="nav-link">MENU</a></li>
+        <li><a href="about.html" class="nav-link">ABOUT</a></li>
+        <li><a href="testimonals.html" class="nav-link">TESTIMONALS</a></li>
+        <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+        <li><a href="add-ons.html" class="nav-link">ADD-ONS</a></li>
+        <li><a href="quiz.html" class="nav-link">QUIZ</a></li> 
+        <li><a href="loyality.html" class="nav-link">LOYALITY-CARD</a></li> 
+        <li><a href="brewing.html" class="nav-link">BREWING</a></li> 
+        <li><a href="coffee_humor_page.html" class="nav-link">HUMOR</a></li> 
+</ul>           
+</nav>
+ </div>
+
+ <section class="coffee personality quiz">
+<h2>Coffee Personality Quiz</h2>
+
+  <!-- Result box on top -->
+  <div id="result"></div>
+
+  <div class="que-contain">
+  <form id="quizForm">
+    <div class="question">
+      <p><strong>1. Aapka mood kaisa hai aaj?</strong></p>
+      <label><input type="radio" name="mood" value="espresso" required /> Energetic</label>
+      <label><input type="radio" name="mood" value="latte" /> Relaxed</label>
+      <label><input type="radio" name="mood" value="americano" /> Focused</label>
+    </div>
+
+    <div class="question">
+      <p><strong>2. Aapko coffee ka taste kaisa pasand hai?</strong></p>
+      <label><input type="radio" name="taste" value="espresso" required /> Strong aur bold</label>
+      <label><input type="radio" name="taste" value="latte" /> Smooth aur creamy</label>
+      <label><input type="radio" name="taste" value="americano" /> Thoda meetha</label>
+    </div>
+
+    <div class="question">
+      <p><strong>3. Coffee kab peena pasand karti hain?</strong></p>
+      <label><input type="radio" name="time" value="espresso" required /> Morning boost</label>
+      <label><input type="radio" name="time" value="latte" /> Afternoon relax</label>
+      <label><input type="radio" name="time" value="americano" /> Work ke dauran</label>
+    </div>
+
+    <div class="question">
+      <p><strong>4. Aapki pasand ki ek cheez coffee mein kya hai?</strong></p>
+      <label><input type="radio" name="custom" value="espresso" required /> Strong caffeine</label>
+      <label><input type="radio" name="custom" value="latte" /> Creamy milk</label>
+      <label><input type="radio" name="custom" value="americano" /> Light taste</label>
+    </div>
+</div>
+    <button type="submit">Result Dekhein</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('quizForm');
+    const resultDiv = document.getElementById('result');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      const answers = {
+        mood: formData.get('mood'),
+        taste: formData.get('taste'),
+        time: formData.get('time'),
+        custom: formData.get('custom')
+      };
+
+      const scores = { espresso: 0, latte: 0, americano: 0 };
+
+      for (const key in answers) {
+        scores[answers[key]] += 1;
+      }
+
+      let highestScore = 0;
+      let bestMatch = '';
+      for (const coffee in scores) {
+        if (scores[coffee] > highestScore) {
+          highestScore = scores[coffee];
+          bestMatch = coffee;
+        }
+      }
+
+      let message = '';
+      if (bestMatch === 'espresso') {
+        message = '☕ Aap ek strong aur energetic Espresso type hain!';
+      } else if (bestMatch === 'latte') {
+        message = '🥛 Aap ek smooth aur creamy Latte type hain!';
+      } else if (bestMatch === 'americano') {
+        message = '💧 Aap ek light aur focused Americano type hain!';
+      }
+
+      resultDiv.textContent = message;
+      window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll top so user sees result
+      console.log
+    });
+  </script>
+  </section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer-container">
+    <p>&copy; 2026 COFFEEPAGLU. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/herjournls._?igsh=M2wwaDgxN3NqbGc0"><img src="imgs/insta.jpg" alt="Instagram"></a>
+      <a href="#"><img src="imgs/fb.jpg" alt="Facebook"></a>
+      <a href="#"><img src="imgs/tiktook.jpg" alt="TicTok"></a>
+    </div>
+  </div>
+</footer>
+
+  </header>
+</body>
+</html>
+<link rel="stylesheet" href="css/style.css">
+<script src="script.js"></script>
