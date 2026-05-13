@@ -679,6 +679,7 @@ width: 100%;
                                     /* BUTTON */
 .contact-box button {
   margin-top: 10px;
+  width: 40%;
   padding: 10px 30px;
   border: none;
   background-color: #683924;
