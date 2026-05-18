@@ -177,6 +177,44 @@ body{
   transform: scale(1.08);
 }
 
+/* ── IMAGE MARQUEE ── */
+.marquee-section {
+  overflow: hidden;
+  padding: 1rem 0;
+  background: #f2d9ce;
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: scrollLeft 20s linear infinite;
+}
+
+.marquee-track img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.marquee-track a img:hover {
+  transform: scale(1.1);
+  border-color: #260f06;
+  transition: all 0.3s ease;
+}
+
+@keyframes scrollLeft {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-25%); }
+}
+
 
 .mood {
   display: flex;
